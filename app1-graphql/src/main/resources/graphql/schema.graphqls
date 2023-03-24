@@ -1,0 +1,23 @@
+type Query{
+  getPerson(id: ID): Person
+}
+
+type Address {
+  idAddress: String
+  descripcion: String
+  distrito: String
+}
+
+type Account {
+  accountNum: String
+  accountType: String
+  balance: Int
+}
+
+type Person {
+  id: String
+  name: String
+  edad: Int
+  account: [Account]
+  address: [Address]
+}
